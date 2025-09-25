@@ -6,26 +6,22 @@
 [![Python](https://img.shields.io/badge/Python-3.11+-E63963?style=flat-square&logo=python)](https://python.org/)
 [![License](https://img.shields.io/badge/License-MIT-E63963?style=flat-square)](LICENSE)
 
-</div>
-
----
-
 ## Вклад
 
-1. **Fork** репозитория
-2. Создайте **feature branch**
-3. **Commit** изменения
-4. **Push** в branch
-5. Откройте **Pull Request**
+**Fork** репозитория.
+
+Создайте **feature branch**
+
+**Commit** изменения
+
+**Push** в branch
+
+Откройте **Pull Request**
 
 ## Контакты
 
-- **Сайт**: [async.pw](https://async.pw)
-- **GitHub**: [@cy7su](https://github.com/cy7su)
-
----
-
-<div align="center">
+**Сайт**: [async.pw](https://async.pw)
+**Telegram**: [@cy7su](https://t.me/cy7su)
 
 ![async.pw](https://img.shields.io/badge/Made%20with-Flask-E63963?style=for-the-badge&logo=flask)
 ![async.pw](https://img.shields.io/badge/Powered%20by-Python-E63963?style=for-the-badge&logo=python)
