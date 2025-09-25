@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История {{ language.name }} - async.pw</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/" class="prompt">[async.pw]</a>
+            <span style="color: #4ec9b0;"> ~$</span>
+            <ul>
+                <li><span class="nav-prefix">./</span><a href="/crystal">crystal</a></li>
+                <li><span class="nav-prefix">./</span><a href="/rust">rust</a></li>
+                <li><span class="nav-prefix">./</span><a href="/python">python</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main class="content">
+            <section class="history-detail">
+                <h1>История {{ language.name }}</h1>
+                
+                <div class="history-content">
+                    <h2>Создатель и год создания</h2>
+                    <p><strong>Создатель:</strong> {{ language.history.creator }}</p>
+                    <p><strong>Год создания:</strong> {{ language.history.year }}</p>
+                    <p><strong>Вдохновение:</strong> {{ language.history.inspiration }}</p>
+                    
+                    <h2>Развитие языка</h2>
+                    <p>{{ language.history.development }}</p>
+                    
+                    <h2>Влияние на индустрию</h2>
+                    <p>{{ language.history.impact }}</p>
+                    
+                    <h2>Будущее развитие</h2>
+                    <p>{{ language.history.future }}</p>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <a href="/{{ language.slug }}" class="btn">← Назад к языку</a>
+                    <a href="/{{ language.slug }}/projects" class="btn">Популярные проекты</a>
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h3>
+                    <i class="devicon-{{ language.icon }}-plain language-icon"></i>
+                    {{ language.name }}
+                </h3>
+                <p>История разработки</p>
+                
+                <div class="sidebar-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Год создания:</span>
+                        <span class="stat-value">{{ language.history.year }}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Возраст:</span>
+                        <span class="stat-value">{{ 2025 - language.history.year|int }} лет</span>
+                    </div>
+                </div>
+                
+                <div class="sidebar-features">
+                    <h4>Ключевые вехи:</h4>
+                    <ul>
+                        {% if language.slug == 'crystal' %}
+                        <li>2011 - Начало разработки</li>
+                        <li>2014 - Первая версия 0.1.0</li>
+                        <li>2021 - Стабильная версия 1.0</li>
+                        {% elif language.slug == 'rust' %}
+                        <li>2006 - Начало разработки</li>
+                        <li>2012 - Первая версия 0.1</li>
+                        <li>2015 - Стабильная версия 1.0</li>
+                        {% else %}
+                        <li>1991 - Первая версия 0.9.0</li>
+                        <li>2000 - Python 2.0</li>
+                        <li>2008 - Python 3.0</li>
+                        {% endif %}
+                    </ul>
+                </div>
+                
+                <div class="sidebar-info">
+                    <h4>Интересные факты:</h4>
+                    <p>
+                        {% if language.slug == 'crystal' %}
+                        Crystal был создан как попытка объединить элегантность Ruby с производительностью C. Название "Crystal" отражает прозрачность и чистоту кода.
+                        {% elif language.slug == 'rust' %}
+                        Rust получил свое название от гриба "rust" (ржавчина), который растет на железе. Это символизирует безопасность и надежность языка.
+                        {% else %}
+                        Python назван в честь британской комедийной группы "Monty Python's Flying Circus". Гвидо ван Россум был большим поклонником их творчества.
+                        {% endif %}
+                    </p>
+                </div>
+                
+                <div class="sidebar-footer">
+                    <p>By async.pw, 2025-09-25</p>
+                    <p class="last-updated">Обновлено: {{ "сегодня" }}</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
