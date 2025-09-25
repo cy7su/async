@@ -344,6 +344,11 @@ def index():
     """Главная страница"""
     return render_template('index.html', languages=LANGUAGES)
 
+@app.route('/about')
+def about():
+    """Страница О нас"""
+    return render_template('about.html')
+
 @app.route('/<language_slug>')
 def language_page(language_slug):
     """Страница языка"""

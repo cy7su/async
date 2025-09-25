@@ -63,8 +63,13 @@ body {
 
 .navbar {
     background-color: var(--color-background);
-    padding: var(--spacing-4) 0 0;
-    position: sticky;
+    background-image: 
+        linear-gradient(rgba(18, 18, 18, 0.705), rgba(18, 18, 18, 1)),
+        url('../svg/navbar.svg');
+    background-size: 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    padding: var(--spacing-2) 0 0;
     top: 0;
     z-index: 100;
 }
@@ -73,6 +78,12 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-6);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.nav-left {
     display: flex;
     align-items: baseline;
     gap: var(--spacing-2);
@@ -125,6 +136,20 @@ body {
 
 .navbar a:hover {
     color: var(--color-accent);
+}
+
+.nav-right {
+    display: flex;
+    align-items: baseline;
+}
+
+.nav-right ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-4);
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
 
@@ -260,15 +285,15 @@ strong {
 
 
 .devicon-crystal-plain {
-    color: #E63963;
+    color: #d8d8d8;
 }
 
 .devicon-rust-plain {
-    color: #E63963;
+    color: #d8d8d8;
 }
 
 .devicon-python-plain {
-    color: #E63963;
+    color: #d8d8d8;
 }
 
 
@@ -303,7 +328,7 @@ a:hover {
     gap: var(--spacing-1);
     background-color: var(--color-surface);
     color: var(--color-highlight);
-    padding: var(--spacing-2) var(--spacing-4);
+    padding: var(--spacing-1) var(--spacing-4);
     text-decoration: none;
     border: 1px solid var(--color-border);
     border-radius: 6px;
