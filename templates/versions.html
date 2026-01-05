@@ -3,60 +3,68 @@
 {{ language.name }} и ключевые этапы развития{% endblock %} {% block content %}
 <h1># Первые версии {{ language.name }}</h1>
 <p>
-    История первых версий языка {{ language.name }} и ключевые этапы развития.
+  История первых версий языка {{ language.name }} и ключевые этапы развития.
 </p>
 
 {% if entry %}
 <div class="content-section">
-    <h2>{{ entry.title }}</h2>
-    <p>{{ entry.content }}</p>
+  <h2>{{ entry.title }}</h2>
+  <p>{{ entry.content }}</p>
 </div>
 {% endif %}
 
 <div class="version-timeline">
-    {% if language.name == 'Crystal' %}
-    <div class="timeline-item">
-        <h3>2014 - Первая версия</h3>
-        <p>
-            Первая версия Crystal была выпущена в 2014 году. Язык активно развивается
-            сообществом.
-        </p>
-    </div>
-    <div class="timeline-item">
-        <h3>2016 - Стабильная версия</h3>
-        <p>Выпуск стабильной версии с основными возможностями языка.</p>
-    </div>
-    {% elif language.name == 'Rust' %}
-    <div class="timeline-item">
-        <h3>2015 - Rust 1.0</h3>
-        <p>
-            Rust 1.0 был выпущен в 2015 году. Язык разрабатывается Mozilla и открытым
-            сообществом.
-        </p>
-    </div>
-    <div class="timeline-item">
-        <h3>2018 - Rust 2018 Edition</h3>
-        <p>Выпуск Rust 2018 Edition с улучшениями в области async/await.</p>
-    </div>
-    {% elif language.name == 'Python' %}
-    <div class="timeline-item">
-        <h3>1991 - Python 0.9.0</h3>
-        <p>Python был создан Гвидо ван Россумом и впервые выпущен в 1991 году.</p>
-    </div>
-    <div class="timeline-item">
-        <h3>2000 - Python 2.0</h3>
-        <p>Выпуск Python 2.0 с новыми возможностями и улучшениями.</p>
-    </div>
-    <div class="timeline-item">
-        <h3>2008 - Python 3.0</h3>
-        <p>Революционный выпуск Python 3.0 с обратно несовместимыми изменениями.</p>
-    </div>
-    {% endif %}
+  {% if language.name == 'Crystal' %}
+  <div class="timeline-item">
+    <h3>2014 - Первая версия</h3>
+    <p>
+      Первая версия Crystal была выпущена в 2014 году. Язык активно развивается
+      сообществом.
+    </p>
+  </div>
+  <div class="timeline-item">
+    <h3>2016 - Стабильная версия</h3>
+    <p>Выпуск стабильной версии с основными возможностями языка.</p>
+  </div>
+  {% elif language.name == 'Rust' %}
+  <div class="timeline-item">
+    <h3>2015 - Rust 1.0</h3>
+    <p>
+      Rust 1.0 был выпущен в 2015 году. Язык разрабатывается Mozilla и открытым
+      сообществом.
+    </p>
+  </div>
+  <div class="timeline-item">
+    <h3>2018 - Rust 2018 Edition</h3>
+    <p>Выпуск Rust 2018 Edition с улучшениями в области async/await.</p>
+  </div>
+  {% elif language.name == 'Python' %}
+  <div class="timeline-item">
+    <h3>1991 - Python 0.9.0</h3>
+    <p>Python был создан Гвидо ван Россумом и впервые выпущен в 1991 году.</p>
+  </div>
+  <div class="timeline-item">
+    <h3>2000 - Python 2.0</h3>
+    <p>Выпуск Python 2.0 с новыми возможностями и улучшениями.</p>
+  </div>
+  <div class="timeline-item">
+    <h3>2008 - Python 3.0</h3>
+    <p>Революционный выпуск Python 3.0 с обратно несовместимыми изменениями.</p>
+  </div>
+  {% endif %}
 </div>
 
 <div class="navigation-buttons">
-    <a href="{{ url_for('language_features', language_slug=language.slug) }}" class="btn">← Особенности</a>
-    <a href="{{ url_for('language_history', language_slug=language.slug) }}" class="btn">Назад к истории →</a>
+  <a
+    href="{{ url_for('language_features', language_slug=language.slug) }}"
+    class="btn"
+    >← Особенности</a
+  >
+  <a
+    href="{{ url_for('language_history', language_slug=language.slug) }}"
+    class="btn"
+    >Назад к истории →</a
+  >
 </div>
 {% endblock %} {% block sidebar_title %}📅 Версии {{ language.name }}{% endblock
 %} {% block sidebar_description %}История версий и этапы развития.{% endblock %}

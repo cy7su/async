@@ -3,28 +3,36 @@ site_name }}{% endblock %} {% block description %}Основные особен�
 language.name }} и его уникальные возможности{% endblock %} {% block content %}
 <h1># Особенности {{ language.name }}</h1>
 <p>
-    Основные особенности языка {{ language.name }} и его уникальные возможности.
+  Основные особенности языка {{ language.name }} и его уникальные возможности.
 </p>
 
 {% if entry %}
 <div class="content-section">
-    <h2>{{ entry.title }}</h2>
-    <p>{{ entry.content }}</p>
+  <h2>{{ entry.title }}</h2>
+  <p>{{ entry.content }}</p>
 </div>
 {% endif %} {% if language.features %}
 <div class="features">
-    <h3>Ключевые особенности:</h3>
-    <ul>
-        {% for feature in language.features|from_json %}
-        <li>{{ feature }}</li>
-        {% endfor %}
-    </ul>
+  <h3>Ключевые особенности:</h3>
+  <ul>
+    {% for feature in language.features|from_json %}
+    <li>{{ feature }}</li>
+    {% endfor %}
+  </ul>
 </div>
 {% endif %}
 
 <div class="navigation-buttons">
-    <a href="{{ url_for('language_history', language_slug=language.slug) }}" class="btn">← Назад к истории</a>
-    <a href="{{ url_for('language_versions', language_slug=language.slug) }}" class="btn">Первые версии →</a>
+  <a
+    href="{{ url_for('language_history', language_slug=language.slug) }}"
+    class="btn"
+    >← Назад к истории</a
+  >
+  <a
+    href="{{ url_for('language_versions', language_slug=language.slug) }}"
+    class="btn"
+    >Первые версии →</a
+  >
 </div>
 {% endblock %} {% block sidebar_title %}⚡ Особенности {{ language.name }}{%
 endblock %} {% block sidebar_description %}Уникальные возможности и особенности

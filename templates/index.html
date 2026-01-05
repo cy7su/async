@@ -1,147 +1,151 @@
 <!doctype html>
 <html lang="ru">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>async.pw - Программирование</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
 
-<body>
+  <body>
     <nav class="navbar">
-        <div class="nav-content">
-            <div class="nav-left">
-                <a href="/" class="prompt">[async.pw]</a>
-                <span style="color: #4ec9b0"> ~$</span>
-                <ul>
-                    <li>
-                        <span class="nav-prefix">./</span><a href="/crystal">crystal</a>
-                    </li>
-                    <li><span class="nav-prefix">./</span><a href="/rust">rust</a></li>
-                    <li>
-                        <span class="nav-prefix">./</span><a href="/python">python</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="nav-right">
-                <ul>
-                    <li>
-                        <span class="nav-prefix">./</span><a href="/about">about</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="nav-content">
+        <div class="nav-left">
+          <a href="/" class="prompt">[async.pw]</a>
+          <span style="color: #4ec9b0"> ~$</span>
+          <ul>
+            <li>
+              <span class="nav-prefix">./</span><a href="/crystal">crystal</a>
+            </li>
+            <li><span class="nav-prefix">./</span><a href="/rust">rust</a></li>
+            <li>
+              <span class="nav-prefix">./</span><a href="/python">python</a>
+            </li>
+          </ul>
         </div>
+        <div class="nav-right">
+          <ul>
+            <li>
+              <span class="nav-prefix">./</span><a href="/about">about</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <div class="container">
-        <main class="content">
-            <h1>async.pw</h1>
-            <p>
-                Современное программирование с акцентом на производительность и
-                безопасность.
-            </p>
+      <main class="content">
+        <h1>async.pw</h1>
+        <p>
+          Современное программирование с акцентом на производительность и
+          безопасность.
+        </p>
 
-            <div class="pattern-section">
-                <h2>О языках программирования</h2>
-                <p>
-                    В современной разработке программного обеспечения выбор языка
-                    программирования играет ключевую роль. Каждый язык имеет свои
-                    особенности, преимущества и области применения.
-                </p>
+        <div class="pattern-section">
+          <h2>О языках программирования</h2>
+          <p>
+            В современной разработке программного обеспечения выбор языка
+            программирования играет ключевую роль. Каждый язык имеет свои
+            особенности, преимущества и области применения.
+          </p>
 
-                <h3>Современные тенденции</h3>
-                <ul>
-                    <li>
-                        <strong>Производительность:</strong> Языки, которые компилируются
-                        в нативный код, обеспечивают максимальную скорость выполнения
-                    </li>
-                    <li>
-                        <strong>Безопасность:</strong> Системы типов и проверки на этапе
-                        компиляции предотвращают множество ошибок
-                    </li>
-                    <li>
-                        <strong>Экосистема:</strong> Богатые библиотеки и активное
-                        сообщество разработчиков
-                    </li>
-                    <li>
-                        <strong>Кроссплатформенность:</strong> Возможность разработки для
-                        различных операционных систем
-                    </li>
-                </ul>
+          <h3>Современные тенденции</h3>
+          <ul>
+            <li>
+              <strong>Производительность:</strong> Языки, которые компилируются
+              в нативный код, обеспечивают максимальную скорость выполнения
+            </li>
+            <li>
+              <strong>Безопасность:</strong> Системы типов и проверки на этапе
+              компиляции предотвращают множество ошибок
+            </li>
+            <li>
+              <strong>Экосистема:</strong> Богатые библиотеки и активное
+              сообщество разработчиков
+            </li>
+            <li>
+              <strong>Кроссплатформенность:</strong> Возможность разработки для
+              различных операционных систем
+            </li>
+          </ul>
+        </div>
+
+        <h3>Популярные языки</h3>
+        <p>
+          На нашем сайте представлены три современных языка программирования:
+        </p>
+        <ul class="language-list">
+          {% for language in languages %}
+          <li>
+            <a href="/{{ language.slug }}">
+              <i class="devicon-{{ language.icon }}-plain language-icon"></i>
+              {{ language.name }}
+            </a>
+            - {{ language.description }}
+          </li>
+          {% endfor %}
+        </ul>
+      </main>
+
+      <aside class="sidebar">
+        <div class="sidebar-content">
+          <h3>О сайте async.pw</h3>
+          <p>
+            Современное программирование с акцентом на производительность и
+            безопасность. Рассказываем о языках, которые формируют будущее
+            разработки.
+          </p>
+
+          <div class="sidebar-stats">
+            <div class="stat-item">
+              <span class="stat-label">Языков:</span>
+              <span class="stat-value">3</span>
             </div>
+            <div class="stat-item">
+              <span class="stat-label">Особенностей:</span>
+              <span class="stat-value">15</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Статей:</span>
+              <span class="stat-value">12</span>
+            </div>
+          </div>
 
-            <h3>Популярные языки</h3>
-            <p>
-                На нашем сайте представлены три современных языка программирования:
-            </p>
-            <ul class="language-list">
-                {% for language in languages %}
-                <li>
-                    <a href="/{{ language.slug }}">
-                        <i class="devicon-{{ language.icon }}-plain language-icon"></i>
-                        {{ language.name }}
-                    </a>
-                    - {{ language.description }}
-                </li>
-                {% endfor %}
+          <div class="sidebar-features">
+            <h4>Что рассказываем:</h4>
+            <ul>
+              <li>Системное программирование</li>
+              <li>Веб-разработка</li>
+              <li>Анализ данных</li>
+              <li>Безопасность кода</li>
+              <li>Производительность</li>
             </ul>
-        </main>
+          </div>
 
-        <aside class="sidebar">
-            <div class="sidebar-content">
-                <h3>О сайте async.pw</h3>
-                <p>
-                    Современное программирование с акцентом на производительность и
-                    безопасность. Рассказываем о языках, которые формируют будущее
-                    разработки.
-                </p>
+          <div class="sidebar-info">
+            <h4>Почему эти языки?</h4>
+            <p>
+              <strong>Crystal</strong> - Ruby-подобный синтаксис с
+              производительностью C.<br /><br />
+              <strong>Rust</strong> - безопасность памяти без сборщика
+              мусора.<br /><br />
+              <strong>Python</strong> - простота и мощная экосистема для ИИ.
+            </p>
+          </div>
 
-                <div class="sidebar-stats">
-                    <div class="stat-item">
-                        <span class="stat-label">Языков:</span>
-                        <span class="stat-value">3</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-label">Особенностей:</span>
-                        <span class="stat-value">15</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-label">Статей:</span>
-                        <span class="stat-value">12</span>
-                    </div>
-                </div>
-
-                <div class="sidebar-features">
-                    <h4>Что рассказываем:</h4>
-                    <ul>
-                        <li>Системное программирование</li>
-                        <li>Веб-разработка</li>
-                        <li>Анализ данных</li>
-                        <li>Безопасность кода</li>
-                        <li>Производительность</li>
-                    </ul>
-                </div>
-
-                <div class="sidebar-info">
-                    <h4>Почему эти языки?</h4>
-                    <p>
-                        <strong>Crystal</strong> - Ruby-подобный синтаксис с
-                        производительностью C.<br /><br />
-                        <strong>Rust</strong> - безопасность памяти без сборщика
-                        мусора.<br /><br />
-                        <strong>Python</strong> - простота и мощная экосистема для ИИ.
-                    </p>
-                </div>
-
-                <div class="sidebar-footer">
-                    <p>By async.pw, 2025-09-25</p>
-                    <p class="last-updated">Обновлено: {{ "сегодня" }}</p>
-                </div>
-            </div>
-        </aside>
+          <div class="sidebar-footer">
+            <p>By async.pw, 2025-09-25</p>
+            <p class="last-updated">Обновлено: {{ "сегодня" }}</p>
+          </div>
+        </div>
+      </aside>
     </div>
-</body>
-
+  </body>
 </html>
