@@ -1,11 +1,10 @@
-{% extends "base.html" %}
-
-{% block title %}Первые версии {{ language.name }} - {{ site_name }}{% endblock %}
-{% block description %}История первых версий языка {{ language.name }} и ключевые этапы развития{% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %}Первые версии {{ language.name }} -
+{{ site_name }}{% endblock %} {% block description %}История первых версий языка
+{{ language.name }} и ключевые этапы развития{% endblock %} {% block content %}
 <h1># Первые версии {{ language.name }}</h1>
-<p>История первых версий языка {{ language.name }} и ключевые этапы развития.</p>
+<p>
+    История первых версий языка {{ language.name }} и ключевые этапы развития.
+</p>
 
 {% if entry %}
 <div class="content-section">
@@ -18,7 +17,10 @@
     {% if language.name == 'Crystal' %}
     <div class="timeline-item">
         <h3>2014 - Первая версия</h3>
-        <p>Первая версия Crystal была выпущена в 2014 году. Язык активно развивается сообществом.</p>
+        <p>
+            Первая версия Crystal была выпущена в 2014 году. Язык активно развивается
+            сообществом.
+        </p>
     </div>
     <div class="timeline-item">
         <h3>2016 - Стабильная версия</h3>
@@ -27,7 +29,10 @@
     {% elif language.name == 'Rust' %}
     <div class="timeline-item">
         <h3>2015 - Rust 1.0</h3>
-        <p>Rust 1.0 был выпущен в 2015 году. Язык разрабатывается Mozilla и открытым сообществом.</p>
+        <p>
+            Rust 1.0 был выпущен в 2015 году. Язык разрабатывается Mozilla и открытым
+            сообществом.
+        </p>
     </div>
     <div class="timeline-item">
         <h3>2018 - Rust 2018 Edition</h3>
@@ -53,8 +58,6 @@
     <a href="{{ url_for('language_features', language_slug=language.slug) }}" class="btn">← Особенности</a>
     <a href="{{ url_for('language_history', language_slug=language.slug) }}" class="btn">Назад к истории →</a>
 </div>
-{% endblock %}
-
-{% block sidebar_title %}📅 Версии {{ language.name }}{% endblock %}
-{% block sidebar_description %}История версий и этапы развития.{% endblock %}
+{% endblock %} {% block sidebar_title %}📅 Версии {{ language.name }}{% endblock
+%} {% block sidebar_description %}История версий и этапы развития.{% endblock %}
 {% block sidebar_footer %}Эволюция языка во времени{% endblock %}

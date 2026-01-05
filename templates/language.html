@@ -1,27 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ language.name }} - async.pw</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-content">
             <div class="nav-left">
                 <a href="/" class="prompt">[async.pw]</a>
-                <span style="color: #4ec9b0;"> ~$</span>
+                <span style="color: #4ec9b0"> ~$</span>
                 <ul>
-                    <li><span class="nav-prefix">./</span><a href="/crystal">crystal</a></li>
+                    <li>
+                        <span class="nav-prefix">./</span><a href="/crystal">crystal</a>
+                    </li>
                     <li><span class="nav-prefix">./</span><a href="/rust">rust</a></li>
-                    <li><span class="nav-prefix">./</span><a href="/python">python</a></li>
+                    <li>
+                        <span class="nav-prefix">./</span><a href="/python">python</a>
+                    </li>
                 </ul>
             </div>
             <div class="nav-right">
                 <ul>
-                    <li><span class="nav-prefix">./</span><a href="/about">about</a></li>
+                    <li>
+                        <span class="nav-prefix">./</span><a href="/about">about</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -32,7 +40,7 @@
             <section class="language-detail">
                 <h1>{{ language.name }}</h1>
                 <p>{{ language.description }}</p>
-                
+
                 <h2>Технические возможности и назначение</h2>
                 {% for feature in language.features %}
                 <div id="feature-{{ loop.index }}" class="feature-section">
@@ -40,7 +48,7 @@
                     <p>{{ feature.description }}</p>
                 </div>
                 {% endfor %}
-                
+
                 <div class="navigation-buttons">
                     <a href="/{{ language.slug }}/history" class="btn">История разработки</a>
                     <a href="/{{ language.slug }}/projects" class="btn">Популярные проекты</a>
@@ -55,7 +63,7 @@
                     {{ language.name }}
                 </h3>
                 <p>{{ language.description }}</p>
-                
+
                 <div class="sidebar-stats">
                     <div class="stat-item">
                         <span class="stat-label">Время прочтения:</span>
@@ -64,11 +72,12 @@
                     <div class="stat-item">
                         <span class="stat-label">Сложность:</span>
                         <span class="stat-value">
-                            {% if language.slug == 'python' %}Низкая{% elif language.slug == 'crystal' %}Средняя{% else %}Высокая{% endif %}
+                            {% if language.slug == 'python' %}Низкая{% elif language.slug ==
+                'crystal' %}Средняя{% else %}Высокая{% endif %}
                         </span>
                     </div>
                 </div>
-                
+
                 <div class="sidebar-features">
                     <h4>Ключевые особенности:</h4>
                     <ul>
@@ -81,35 +90,32 @@
                         {% endfor %}
                     </ul>
                 </div>
-                
+
                 <div class="sidebar-info">
                     <h4>Дополнительная информация:</h4>
                     <p>
                         {% if language.slug == 'crystal' %}
-                        <strong>Основные применения:</strong><br>
-                        • Веб-разработка (API, микросервисы)<br>
-                        • Системное программирование<br>
-                        • Высокопроизводительные приложения<br>
-                        • Компиляторы и инструменты разработки<br>
-                        • Научные вычисления
-                        {% elif language.slug == 'rust' %}
-                        <strong>Основные применения:</strong><br>
-                        • Системное программирование (ОС, драйверы)<br>
-                        • Веб-серверы и API<br>
-                        • Криптография и блокчейн<br>
-                        • Игровые движки<br>
-                        • Встраиваемые системы
-                        {% else %}
-                        <strong>Основные применения:</strong><br>
-                        • Веб-разработка (Django, Flask)<br>
-                        • Анализ данных и машинное обучение<br>
-                        • Автоматизация и скрипты<br>
-                        • Научные вычисления<br>
-                        • Искусственный интеллект
-                        {% endif %}
+                        <strong>Основные применения:</strong><br />
+                        • Веб-разработка (API, микросервисы)<br />
+                        • Системное программирование<br />
+                        • Высокопроизводительные приложения<br />
+                        • Компиляторы и инструменты разработки<br />
+                        • Научные вычисления {% elif language.slug == 'rust' %}
+                        <strong>Основные применения:</strong><br />
+                        • Системное программирование (ОС, драйверы)<br />
+                        • Веб-серверы и API<br />
+                        • Криптография и блокчейн<br />
+                        • Игровые движки<br />
+                        • Встраиваемые системы {% else %}
+                        <strong>Основные применения:</strong><br />
+                        • Веб-разработка (Django, Flask)<br />
+                        • Анализ данных и машинное обучение<br />
+                        • Автоматизация и скрипты<br />
+                        • Научные вычисления<br />
+                        • Искусственный интеллект {% endif %}
                     </p>
                 </div>
-                
+
                 <div class="sidebar-footer">
                     <p>By async.pw, 2025-09-25</p>
                     <p class="last-updated">Последнее обновление: {{ "сегодня" }}</p>
@@ -119,34 +125,34 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const featureLinks = document.querySelectorAll('.feature-link');
-            const featureSections = document.querySelectorAll('.feature-section');
-            
+        document.addEventListener("DOMContentLoaded", function() {
+            const featureLinks = document.querySelectorAll(".feature-link");
+            const featureSections = document.querySelectorAll(".feature-section");
+
             function clearHighlights() {
-                featureSections.forEach(section => {
-                    section.classList.remove('highlighted');
+                featureSections.forEach((section) => {
+                    section.classList.remove("highlighted");
                 });
             }
-            
-            featureLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+
+            featureLinks.forEach((link) => {
+                link.addEventListener("click", function(e) {
                     e.preventDefault();
                     clearHighlights();
-                    
-                    const targetId = this.getAttribute('data-target');
+
+                    const targetId = this.getAttribute("data-target");
                     const targetSection = document.getElementById(targetId);
-                    
+
                     if (targetSection) {
-                        targetSection.classList.add('highlighted');
+                        targetSection.classList.add("highlighted");
                         targetSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
+                            behavior: "smooth",
+                            block: "start",
                         });
                         setTimeout(() => {
-                            targetSection.classList.add('fade-out');
+                            targetSection.classList.add("fade-out");
                             setTimeout(() => {
-                                targetSection.classList.remove('highlighted', 'fade-out');
+                                targetSection.classList.remove("highlighted", "fade-out");
                             }, 500);
                         }, 3000);
                     }
@@ -155,4 +161,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -1,9 +1,6 @@
-{% extends "base.html" %}
-
-{% block title %}{{ project.name }} - {{ language.name }} - {{ site_name }}{% endblock %}
-{% block description %}{{ project.description }}{% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %}{{ project.name }} - {{ language.name
+}} - {{ site_name }}{% endblock %} {% block description %}{{ project.description
+}}{% endblock %} {% block content %}
 <h1># {{ project.name }}</h1>
 <p>{{ project.description }}</p>
 
@@ -24,11 +21,12 @@
 <div class="project-info">
     <h3>Информация о проекте</h3>
     <div class="info-grid">
+        <div class="info-item"><strong>Язык:</strong> {{ language.name }}</div>
         <div class="info-item">
-            <strong>Язык:</strong> {{ language.name }}
-        </div>
-        <div class="info-item">
-            <strong>Тип:</strong> {% if 'фреймворк' in project.description.lower() %}Веб-фреймворк{% elif 'среда' in project.description.lower() %}Среда выполнения{% elif 'библиотека' in project.description.lower() %}Библиотека{% else %}Проект{% endif %}
+            <strong>Тип:</strong> {% if 'фреймворк' in project.description.lower()
+      %}Веб-фреймворк{% elif 'среда' in project.description.lower() %}Среда
+            выполнения{% elif 'библиотека' in project.description.lower()
+      %}Библиотека{% else %}Проект{% endif %}
         </div>
         <div class="info-item">
             <strong>Создан:</strong> {{ project.created_at.strftime('%Y-%m-%d') }}
@@ -40,8 +38,6 @@
     <a href="{{ url_for('language_projects', language_slug=language.slug) }}" class="btn">← Назад к проектам</a>
     <a href="{{ url_for('language_page', language_slug=language.slug) }}" class="btn">К языку {{ language.name }} →</a>
 </div>
-{% endblock %}
-
-{% block sidebar_title %}📦 {{ project.name }}{% endblock %}
-{% block sidebar_description %}{{ project.description[:50] }}...{% endblock %}
-{% block sidebar_footer %}Проект на {{ language.name }}{% endblock %}
+{% endblock %} {% block sidebar_title %}📦 {{ project.name }}{% endblock %} {%
+block sidebar_description %}{{ project.description[:50] }}...{% endblock %} {%
+block sidebar_footer %}Проект на {{ language.name }}{% endblock %}

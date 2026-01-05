@@ -8,32 +8,30 @@
 
 :root {
     --color-background: #121212;
-    --color-surface: #1E1E1E;
-    --color-secondary-text: #B0B0B0;
-    --color-highlight: #E0E0E0;
-    --color-accent: #E63963;
-    
-    
+    --color-surface: #1e1e1e;
+    --color-secondary-text: #b0b0b0;
+    --color-highlight: #e0e0e0;
+    --color-accent: #e63963;
+
     --color-border: #404040;
     --color-muted: #808080;
     --color-link: #569cd6;
     --color-prompt: #4ec9b0;
-    
-    
+
     --color-crystal: #000100;
     --color-rust: #000000;
     --color-python: #3776ab;
-    
-    
-    --font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+
+    --font-family:
+        "JetBrains Mono", "Fira Code", "Consolas", "Monaco", "Courier New",
+        monospace;
     --font-size-base: 1rem;
     --font-size-sm: 0.875rem;
     --font-size-lg: 1.125rem;
     --font-size-xl: 1.25rem;
     --font-size-2xl: 1.5rem;
     --font-size-3xl: 1.875rem;
-    
-    
+
     --spacing-1: 0.25rem;
     --spacing-2: 0.5rem;
     --spacing-3: 0.75rem;
@@ -44,7 +42,6 @@
     --spacing-16: 4rem;
     --spacing-20: 5rem;
 }
-
 
 html {
     scroll-behavior: smooth;
@@ -60,12 +57,11 @@ body {
     padding: 0;
 }
 
-
 .navbar {
     background-color: var(--color-background);
-    background-image: 
+    background-image:
         linear-gradient(rgba(18, 18, 18, 0.705), rgba(18, 18, 18, 1)),
-        url('../svg/navbar.svg');
+        url("../svg/navbar.svg");
     background-size: 100%;
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -152,7 +148,6 @@ body {
     align-items: center;
 }
 
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -163,13 +158,11 @@ body {
     min-height: calc(100vh - 80px);
 }
 
-
 .content {
     padding-right: var(--spacing-8);
     max-width: 800px;
     margin: 0 auto;
 }
-
 
 h1 {
     font-size: var(--font-size-3xl);
@@ -196,12 +189,10 @@ h3 {
     margin-bottom: var(--spacing-3);
 }
 
-
 p {
     margin-bottom: var(--spacing-4);
     color: var(--color-secondary-text);
 }
-
 
 ul {
     list-style: none;
@@ -217,7 +208,6 @@ li {
 li::before {
     display: none;
 }
-
 
 .content ul:not(.sidebar-features ul):not(.sidebar ul):not(.language-list) {
     list-style: none;
@@ -236,7 +226,6 @@ li::before {
     display: block;
 }
 
-
 .language-list {
     list-style: none;
 }
@@ -250,28 +239,24 @@ li::before {
     display: none;
 }
 
-
 .navbar li::before {
     display: none;
 }
-
 
 strong {
     color: var(--color-highlight);
     font-weight: bold;
 }
 
-
 ::selection {
-    background-color: #E63963;
+    background-color: #e63963;
     color: var(--color-background);
 }
 
 ::-moz-selection {
-    background-color: #E63963;
+    background-color: #e63963;
     color: var(--color-background);
 }
-
 
 .language-icon {
     display: inline-block;
@@ -282,7 +267,6 @@ strong {
     font-size: 24px;
     line-height: 1;
 }
-
 
 .devicon-crystal-plain {
     color: #d8d8d8;
@@ -295,7 +279,6 @@ strong {
 .devicon-python-plain {
     color: #d8d8d8;
 }
-
 
 .sidebar .devicon-crystal-plain,
 .sidebar .devicon-rust-plain,
@@ -310,7 +293,6 @@ strong {
     color: var(--color-accent);
 }
 
-
 a {
     color: white;
     text-decoration: none;
@@ -320,7 +302,6 @@ a {
 a:hover {
     color: var(--color-accent);
 }
-
 
 .btn {
     display: inline-flex;
@@ -347,7 +328,6 @@ a:hover {
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(230, 57, 99, 0.2);
 }
-
 
 .video-placeholder {
     margin: var(--spacing-8) 0;
@@ -380,11 +360,9 @@ a:hover {
     margin: 0;
 }
 
-
 .features {
     margin-bottom: var(--spacing-6);
 }
-
 
 .language-detail h2 {
     color: var(--color-highlight);
@@ -420,7 +398,6 @@ a:hover {
     color: var(--color-secondary-text);
 }
 
-
 .navigation-buttons {
     margin-top: var(--spacing-8);
     display: flex;
@@ -428,7 +405,6 @@ a:hover {
     flex-wrap: wrap;
     justify-content: flex-end;
 }
-
 
 .projects-grid {
     display: grid;
@@ -458,7 +434,6 @@ a:hover {
     margin-bottom: var(--spacing-4);
     color: var(--color-secondary-text);
 }
-
 
 .sidebar {
     padding: var(--spacing-6);
@@ -491,7 +466,6 @@ a:hover {
     color: var(--color-secondary-text);
 }
 
-
 .sidebar-stats {
     background-color: var(--color-background);
     border: 1px solid var(--color-border);
@@ -521,7 +495,6 @@ a:hover {
     font-weight: bold;
     font-size: var(--font-size-sm);
 }
-
 
 .sidebar-features {
     margin-bottom: var(--spacing-6);
@@ -555,7 +528,6 @@ a:hover {
     margin-bottom: 0;
 }
 
-
 .feature-link {
     color: var(--color-accent);
     text-decoration: none;
@@ -568,7 +540,6 @@ a:hover {
     color: var(--color-highlight);
 }
 
-
 .feature-section {
     transition: none;
     border-radius: 0;
@@ -577,12 +548,11 @@ a:hover {
 }
 
 .feature-section.highlighted h3 {
-    background-color: #E63963;
+    background-color: #e63963;
     color: var(--color-background);
     padding: var(--spacing-1) var(--spacing-2);
     transition: all 0.5s ease;
 }
-
 
 .feature-section.fade-out h3 {
     background-color: transparent;
@@ -590,7 +560,6 @@ a:hover {
     padding: 0;
     transition: all 0.5s ease;
 }
-
 
 .sidebar-info {
     margin-bottom: var(--spacing-6);
@@ -610,7 +579,6 @@ a:hover {
     margin: 0;
 }
 
-
 .sidebar-footer {
     border-top: 1px solid var(--color-border);
     padding-top: var(--spacing-4);
@@ -627,17 +595,14 @@ a:hover {
     font-style: italic;
 }
 
-
 .projects-detail {
     margin: 0;
 }
-
 
 .projects-page {
     margin: 0;
     padding: 0;
 }
-
 
 .projects-content h2 {
     color: var(--color-highlight);
@@ -664,7 +629,6 @@ a:hover {
     margin-bottom: var(--spacing-6);
 }
 
-
 .project-item {
     margin-bottom: var(--spacing-8);
     padding-bottom: var(--spacing-6);
@@ -681,7 +645,6 @@ a:hover {
     gap: var(--spacing-3);
     margin-bottom: var(--spacing-4);
 }
-
 
 .github-btn {
     display: inline-flex;
@@ -707,7 +670,6 @@ a:hover {
     font-size: 16px;
 }
 
-
 .project-info {
     margin-top: var(--spacing-4);
 }
@@ -719,14 +681,13 @@ a:hover {
     font-weight: bold;
 }
 
-
 pre {
     background: #1a1a1a;
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
     margin: var(--spacing-3) 0;
     overflow-x: auto;
-    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    font-family: "JetBrains Mono", "Fira Code", "Consolas", monospace;
     font-size: 14px;
     line-height: 1.5;
 }
@@ -735,7 +696,6 @@ code {
     font-family: inherit;
 }
 
-
 .highlight {
     background: #1a1a1a !important;
     border: 1px solid #333 !important;
@@ -743,7 +703,7 @@ code {
     padding: var(--spacing-4) !important;
     margin: var(--spacing-3) 0 !important;
     overflow-x: auto !important;
-    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace !important;
+    font-family: "JetBrains Mono", "Fira Code", "Consolas", monospace !important;
     font-size: 14px !important;
     line-height: 1.6 !important;
 }
@@ -759,56 +719,190 @@ code {
     color: inherit !important;
 }
 
+.highlight .c {
+    color: #75715e;
+    font-style: italic;
+}
 
-.highlight .c { color: #75715e; font-style: italic; } 
-.highlight .s { color: #e6db74; } 
-.highlight .k { color: #66d9ef; font-weight: bold; } 
-.highlight .n { color: #f8f8f2; } 
-.highlight .o { color: #f92672; } 
-.highlight .p { color: #f8f8f2; } 
-.highlight .nb { color: #a6e22e; } 
-.highlight .nc { color: #a6e22e; } 
-.highlight .nd { color: #a6e22e; } 
-.highlight .ni { color: #f8f8f2; } 
-.highlight .ne { color: #a6e22e; } 
-.highlight .nf { color: #a6e22e; } 
-.highlight .nl { color: #a6e22e; } 
-.highlight .nn { color: #f8f8f2; } 
-.highlight .nx { color: #a6e22e; } 
-.highlight .py { color: #a6e22e; } 
-.highlight .nt { color: #f92672; } 
-.highlight .nv { color: #f8f8f2; } 
-.highlight .ow { color: #f92672; } 
-.highlight .w { color: #f8f8f2; } 
-.highlight .mb { color: #ae81ff; } 
-.highlight .mf { color: #ae81ff; } 
-.highlight .mh { color: #ae81ff; } 
-.highlight .mi { color: #ae81ff; } 
-.highlight .mo { color: #ae81ff; } 
-.highlight .sa { color: #e6db74; } 
-.highlight .sb { color: #e6db74; } 
-.highlight .sc { color: #e6db74; } 
-.highlight .dl { color: #e6db74; } 
-.highlight .sd { color: #e6db74; } 
-.highlight .s2 { color: #e6db74; } 
-.highlight .se { color: #ae81ff; } 
-.highlight .sh { color: #e6db74; } 
-.highlight .si { color: #e6db74; } 
-.highlight .sx { color: #e6db74; } 
-.highlight .sr { color: #e6db74; } 
-.highlight .s1 { color: #e6db74; } 
-.highlight .ss { color: #e6db74; } 
-.highlight .bp { color: #f8f8f2; } 
-.highlight .fm { color: #a6e22e; } 
-.highlight .vc { color: #f8f8f2; } 
-.highlight .vg { color: #f8f8f2; } 
-.highlight .vi { color: #f8f8f2; } 
-.highlight .vm { color: #f8f8f2; } 
-.highlight .il { color: #ae81ff; } 
+.highlight .s {
+    color: #e6db74;
+}
 
+.highlight .k {
+    color: #66d9ef;
+    font-weight: bold;
+}
+
+.highlight .n {
+    color: #f8f8f2;
+}
+
+.highlight .o {
+    color: #f92672;
+}
+
+.highlight .p {
+    color: #f8f8f2;
+}
+
+.highlight .nb {
+    color: #a6e22e;
+}
+
+.highlight .nc {
+    color: #a6e22e;
+}
+
+.highlight .nd {
+    color: #a6e22e;
+}
+
+.highlight .ni {
+    color: #f8f8f2;
+}
+
+.highlight .ne {
+    color: #a6e22e;
+}
+
+.highlight .nf {
+    color: #a6e22e;
+}
+
+.highlight .nl {
+    color: #a6e22e;
+}
+
+.highlight .nn {
+    color: #f8f8f2;
+}
+
+.highlight .nx {
+    color: #a6e22e;
+}
+
+.highlight .py {
+    color: #a6e22e;
+}
+
+.highlight .nt {
+    color: #f92672;
+}
+
+.highlight .nv {
+    color: #f8f8f2;
+}
+
+.highlight .ow {
+    color: #f92672;
+}
+
+.highlight .w {
+    color: #f8f8f2;
+}
+
+.highlight .mb {
+    color: #ae81ff;
+}
+
+.highlight .mf {
+    color: #ae81ff;
+}
+
+.highlight .mh {
+    color: #ae81ff;
+}
+
+.highlight .mi {
+    color: #ae81ff;
+}
+
+.highlight .mo {
+    color: #ae81ff;
+}
+
+.highlight .sa {
+    color: #e6db74;
+}
+
+.highlight .sb {
+    color: #e6db74;
+}
+
+.highlight .sc {
+    color: #e6db74;
+}
+
+.highlight .dl {
+    color: #e6db74;
+}
+
+.highlight .sd {
+    color: #e6db74;
+}
+
+.highlight .s2 {
+    color: #e6db74;
+}
+
+.highlight .se {
+    color: #ae81ff;
+}
+
+.highlight .sh {
+    color: #e6db74;
+}
+
+.highlight .si {
+    color: #e6db74;
+}
+
+.highlight .sx {
+    color: #e6db74;
+}
+
+.highlight .sr {
+    color: #e6db74;
+}
+
+.highlight .s1 {
+    color: #e6db74;
+}
+
+.highlight .ss {
+    color: #e6db74;
+}
+
+.highlight .bp {
+    color: #f8f8f2;
+}
+
+.highlight .fm {
+    color: #a6e22e;
+}
+
+.highlight .vc {
+    color: #f8f8f2;
+}
+
+.highlight .vg {
+    color: #f8f8f2;
+}
+
+.highlight .vi {
+    color: #f8f8f2;
+}
+
+.highlight .vm {
+    color: #f8f8f2;
+}
+
+.highlight .il {
+    color: #ae81ff;
+}
 
 h3.highlighted {
-    background-color: #E63963 !important;
+    background-color: #e63963 !important;
     color: var(--color-background) !important;
     padding: var(--spacing-1) var(--spacing-2) !important;
     transition: all 0.5s ease !important;
@@ -816,20 +910,17 @@ h3.highlighted {
     margin: var(--spacing-2) 0;
 }
 
-
 h3.fade-out {
     background: rgba(230, 57, 99, 0.1) !important;
     color: var(--text-primary) !important;
     transition: all 0.5s ease !important;
 }
 
-
 h3 {
     transition: all 0.5s ease;
     padding: var(--spacing-1) var(--spacing-2);
     margin: var(--spacing-2) 0;
 }
-
 
 .error-page {
     text-align: center;
@@ -854,43 +945,42 @@ h3 {
     color: var(--color-secondary-text);
 }
 
-
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
         gap: var(--spacing-6);
         padding: var(--spacing-6) var(--spacing-4);
     }
-    
+
     .content {
         padding-right: 0;
         max-width: 100%;
         margin: 0 auto;
     }
-    
+
     .sidebar {
         position: static;
         margin-top: var(--spacing-8);
     }
-    
+
     .language-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .navigation-buttons {
         flex-direction: column;
     }
-    
+
     .nav-content {
         flex-direction: column;
         gap: var(--spacing-4);
         text-align: center;
     }
-    
+
     .navbar ul {
         flex-direction: column;
         gap: var(--spacing-3);
@@ -901,15 +991,15 @@ h3 {
     .container {
         padding: var(--spacing-4) var(--spacing-3);
     }
-    
+
     h1 {
         font-size: var(--font-size-2xl);
     }
-    
+
     h2 {
         font-size: var(--font-size-xl);
     }
-    
+
     .language-card,
     .project-card {
         padding: var(--spacing-4);
